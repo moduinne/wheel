@@ -1,0 +1,122 @@
+[
+    {
+        "name": "alanine",
+        "triple": "Ala",
+        "single": "A",
+        "mass": "89"
+    },
+    {
+        "name": "arginine",
+        "triple": "Arg",
+        "single": "R",
+        "mass": "174"
+    },
+    {
+        "name": "asparagine",
+        "triple": "Asn",
+        "single": "N",
+        "mass": "132"
+    },
+    {
+        "name": "aspartic",
+        "triple": "Asp",
+        "single": "D",
+        "mass": "133"
+    },
+    {
+        "name": "cysteine",
+        "triple": "Cys",
+        "single": "C",
+        "mass": "121"
+    },
+    {
+        "name": "glutamic",
+        "triple": "Gln",
+        "single": "E",
+        "mass": "146"
+    },
+    {
+        "name": "glutamine",
+        "triple": "Glu",
+        "single": "Q",
+        "mass": "147"
+    },
+    {
+        "name": "glycine",
+        "triple": "Gly",
+        "single": "G",
+        "mass": "75"
+    },
+    {
+        "name": "histidine",
+        "triple": "His",
+        "single": "H",
+        "mass": "155"
+    },
+    {
+        "name": "isoleucine",
+        "triple": "Ile",
+        "single": "I",
+        "mass": "131"
+    },
+    {
+        "name": "leucine",
+        "triple": "Leu",
+        "single": "L",
+        "mass": "131"
+    },
+    {
+        "name": "lysine",
+        "triple": "Lys",
+        "single": "K",
+        "mass": "146"
+    },
+    {
+        "name": "methionine",
+        "triple": "Met",
+        "single": "M",
+        "mass": "149"
+    },
+    {
+        "name": "phenylalanine",
+        "triple": "Phe",
+        "single": "F",
+        "mass": "165"
+    },
+    {
+        "name": "proline",
+        "triple": "Pro",
+        "single": "P",
+        "mass": "115"
+    },
+    {
+        "name": "serine",
+        "triple": "Ser",
+        "single": "S",
+        "mass": "105"
+    },
+    {
+        "name": "threonine",
+        "triple": "Thr",
+        "single": "T",
+        "mass": "119"
+    },
+    {
+        "name": "tryptophan",
+        "triple": "Trp",
+        "single": "W",
+        "mass": "204"
+    },
+    {
+        "name": "tyrosine",
+        "triple": "Tyr",
+        "single": "Y",
+        "mass": "181"
+    },
+    {
+        "name": "valine",
+        "triple": "Val",
+        "single": "V",
+        "mass": "117"
+    }
+]

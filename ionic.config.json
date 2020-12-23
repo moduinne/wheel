@@ -1,5 +1,8 @@
 {
   "name": "wheelProject",
-  "integrations": {},
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
   "type": "angular"
 }
