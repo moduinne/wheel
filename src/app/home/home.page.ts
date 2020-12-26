@@ -19,7 +19,7 @@ export class HomePage implements OnInit{
   }
 
   public populateAminoAcids() {
-    this.svc.getAllAminoAcids().subscribe(res => this.aminoAcids = res);
+    this.svc.getAllAminoAcids().subscribe((res) => this.aminoAcids = res);
   }
 
   public openPicker(){
@@ -33,12 +33,13 @@ export class HomePage implements OnInit{
       defaultItems: [
         {index:0, value:this.aminoAcids[0].triple}
       ]
-    }).then(result => {
-      let msg = `Selected ${result[0].triple}`;
-      let toast = this.toastCtrl.create({
-        message:msg,
-        duration:4000
-      });
     });
+    // .then(result => {
+    //   let msg = `Selected ${result[0].triple}`;
+    //    let toast = this.toastCtrl.create({
+    //      message:msg,
+    //      duration:4000
+    //    });
+    // });
   }
 }
