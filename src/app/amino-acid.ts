@@ -4,6 +4,7 @@ export class AminoAcid {
         public name:string,
         public triple:string,
         public single:string,
-        public mass:number
+        public mass:number,
+        public description:string
     ){}
 }

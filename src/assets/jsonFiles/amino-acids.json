@@ -3,120 +3,140 @@
         "name": "alanine",
         "triple": "Ala",
         "single": "A",
-        "mass": "89"
+        "mass": "89",
+        "description": "Ala"
     },
     {
         "name": "arginine",
         "triple": "Arg",
         "single": "R",
-        "mass": "174"
+        "mass": "174",
+        "description": "Arg"
     },
     {
         "name": "asparagine",
         "triple": "Asn",
         "single": "N",
-        "mass": "132"
+        "mass": "132",
+        "description": "Asn"
     },
     {
         "name": "aspartic",
         "triple": "Asp",
         "single": "D",
-        "mass": "133"
+        "mass": "133",
+        "description": "Asp"
     },
     {
         "name": "cysteine",
         "triple": "Cys",
         "single": "C",
-        "mass": "121"
+        "mass": "121",
+        "description": "Cys"
     },
     {
         "name": "glutamic",
         "triple": "Gln",
         "single": "E",
-        "mass": "146"
+        "mass": "146",
+        "description": "Gln"
     },
     {
         "name": "glutamine",
         "triple": "Glu",
         "single": "Q",
-        "mass": "147"
+        "mass": "147",
+        "description": "Glu"
     },
     {
         "name": "glycine",
         "triple": "Gly",
         "single": "G",
-        "mass": "75"
+        "mass": "75",
+        "description": "Gly"
     },
     {
         "name": "histidine",
         "triple": "His",
         "single": "H",
-        "mass": "155"
+        "mass": "155",
+        "description": "His"
     },
     {
         "name": "isoleucine",
         "triple": "Ile",
         "single": "I",
-        "mass": "131"
+        "mass": "131",
+        "description": "Ile"
     },
     {
         "name": "leucine",
         "triple": "Leu",
         "single": "L",
-        "mass": "131"
+        "mass": "131",
+        "description": "Leu"
     },
     {
         "name": "lysine",
         "triple": "Lys",
         "single": "K",
-        "mass": "146"
+        "mass": "146",
+        "description": "Lys"
     },
     {
         "name": "methionine",
         "triple": "Met",
         "single": "M",
-        "mass": "149"
+        "mass": "149",
+        "description": "Met"
     },
     {
         "name": "phenylalanine",
         "triple": "Phe",
         "single": "F",
-        "mass": "165"
+        "mass": "165",
+        "description": "Phe"
     },
     {
         "name": "proline",
         "triple": "Pro",
         "single": "P",
-        "mass": "115"
+        "mass": "115",
+        "description": "Pro"
     },
     {
         "name": "serine",
         "triple": "Ser",
         "single": "S",
-        "mass": "105"
+        "mass": "105",
+        "description": "Ser"
     },
     {
         "name": "threonine",
         "triple": "Thr",
         "single": "T",
-        "mass": "119"
+        "mass": "119",
+        "description": "Thr"
     },
     {
         "name": "tryptophan",
         "triple": "Trp",
         "single": "W",
-        "mass": "204"
+        "mass": "204",
+        "description": "Trp"
     },
     {
         "name": "tyrosine",
         "triple": "Tyr",
         "single": "Y",
-        "mass": "181"
+        "mass": "181",
+        "description": "Tyr"
     },
     {
         "name": "valine",
         "triple": "Val",
         "single": "V",
-        "mass": "117"
+        "mass": "117",
+        "description": "Val"
     }
 ]

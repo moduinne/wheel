@@ -9,70 +9,15 @@ import { AminoAcidService } from '../amino-acid.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit{
-    public amino_keys = [
-      {
-          description: "Ala"
-      },
-      {
-          description: "Arg"
-      },
-      {
-          description: "Asn"
-      },
-      {
-          description: "Asp"
-      },
-      {
-          description: "Cys"
-      },
-      {
-          description: "Gln"
-      },
-      {
-          description: "Glu"
-      },
-      {
-          description: "Gly"
-      },
-      {
-          description: "His"
-      },
-      {
-          description: "Ile"
-      },
-      {
-          description: "Leu"
-      },
-      {
-          description: "Lys"
-      },
-      {
-          description: "Met"
-      },
-      {
-          description: "Phe"
-      },
-      {
-          description: "Pro"
-      },
-      {
-          description: "Ser"
-      },
-      {
-          description: "Thr"
-      },
-      {
-          description: "Trp"
-      },
-      {
-          description: "Tyr"
-      },
-      {
-          description: "Val"
-      }
-  ]
+    
 
   public aminoAcids = []
+
+  public pos = 0;
+
+  public peptide = [];
+
+ 
 
   constructor(public navCtrl:NavController, private svc:AminoAcidService, private selector:WheelSelector, public toastCtrl:ToastController) {}
 
@@ -86,14 +31,14 @@ export class HomePage implements OnInit{
 
   public openPicker(){
     this.selector.show({
-      title:'bitch Amino',
-      positiveButtonText:'rape amino',
-      negativeButtonText:'nah',
+      title:'Amino Acid Picker',
+      positiveButtonText:'Select',
+      negativeButtonText:'Cancel',
       items:[
-        this.amino_keys
+        this.aminoAcids
       ],
       defaultItems: [
-        {index:0, value:this.amino_keys[0].description}
+        {index:0, value:this.aminoAcids[0].description}
       ]
     });
   }
