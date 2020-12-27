@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'; 
 import { WheelSelector } from '@ionic-native/wheel-selector/ngx';
 import { NavController, ToastController } from '@ionic/angular';
 import { AminoAcidService } from '../amino-acid.service';
@@ -9,6 +9,68 @@ import { AminoAcidService } from '../amino-acid.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit{
+    public amino_keys = [
+      {
+          description: "Ala"
+      },
+      {
+          description: "Arg"
+      },
+      {
+          description: "Asn"
+      },
+      {
+          description: "Asp"
+      },
+      {
+          description: "Cys"
+      },
+      {
+          description: "Gln"
+      },
+      {
+          description: "Glu"
+      },
+      {
+          description: "Gly"
+      },
+      {
+          description: "His"
+      },
+      {
+          description: "Ile"
+      },
+      {
+          description: "Leu"
+      },
+      {
+          description: "Lys"
+      },
+      {
+          description: "Met"
+      },
+      {
+          description: "Phe"
+      },
+      {
+          description: "Pro"
+      },
+      {
+          description: "Ser"
+      },
+      {
+          description: "Thr"
+      },
+      {
+          description: "Trp"
+      },
+      {
+          description: "Tyr"
+      },
+      {
+          description: "Val"
+      }
+  ]
 
   public aminoAcids = []
 
@@ -24,22 +86,15 @@ export class HomePage implements OnInit{
 
   public openPicker(){
     this.selector.show({
-      title:'Select Amino',
-      positiveButtonText:'Choose amino',
+      title:'bitch Amino',
+      positiveButtonText:'rape amino',
       negativeButtonText:'nah',
       items:[
-        this.aminoAcids
+        this.amino_keys
       ],
       defaultItems: [
-        {index:0, value:this.aminoAcids[0].triple}
+        {index:0, value:this.amino_keys[0].description}
       ]
     });
-    // .then(result => {
-    //   let msg = `Selected ${result[0].triple}`;
-    //    let toast = this.toastCtrl.create({
-    //      message:msg,
-    //      duration:4000
-    //    });
-    // });
   }
 }
