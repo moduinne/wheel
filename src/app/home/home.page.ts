@@ -40,6 +40,8 @@ export class HomePage implements OnInit{
       defaultItems: [
         {index:0, value:this.aminoAcids[0].description}
       ]
+    }).then(result => {
+      let msg = `Selected ${result[0].description}`
     });
   }
 }
