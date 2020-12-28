@@ -10,7 +10,6 @@ import { AminoAcidService } from '../amino-acid.service';
 })
 export class HomePage implements OnInit{
     
-
   public aminoAcids = []
 
   public pos = 0;
@@ -19,11 +18,11 @@ export class HomePage implements OnInit{
 
   public chosen;
 
-  public amino;
-
- 
-
-  constructor(public navCtrl:NavController, private svc:AminoAcidService, private selector:WheelSelector, public toastCtrl:ToastController) {}
+  constructor(public navCtrl:NavController,
+    private svc:AminoAcidService,
+    private selector:WheelSelector,
+    public toastCtrl:ToastController
+    ) {}
 
   ngOnInit(): void {
     this.populateAminoAcids();
@@ -44,13 +43,9 @@ export class HomePage implements OnInit{
       defaultItems: [
         {index:0, value:this.aminoAcids[0].description}
       ]
-    }).then(result => {
-      this.chosen = result;
-      for(let a of this.aminoAcids) {
-        if (a.description === this.chosen.description) {
-          this.amino = a;
-        }
-      }
+    }).then((result) => {
+      this.chosen = result.data;
+      this.peptide.push(this.chosen);
     });
   }
 }
