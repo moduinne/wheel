@@ -17,6 +17,10 @@ export class HomePage implements OnInit{
 
   public peptide = [];
 
+  public chosen;
+
+  public amino;
+
  
 
   constructor(public navCtrl:NavController, private svc:AminoAcidService, private selector:WheelSelector, public toastCtrl:ToastController) {}
@@ -41,7 +45,12 @@ export class HomePage implements OnInit{
         {index:0, value:this.aminoAcids[0].description}
       ]
     }).then(result => {
-      let msg = `Selected ${result[0].description}`
+      this.chosen = result;
+      for(let a of this.aminoAcids) {
+        if (a.description === this.chosen.description) {
+          this.amino = a;
+        }
+      }
     });
   }
 }
