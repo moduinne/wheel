@@ -7,12 +7,18 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-button (click)="openPicker()">Open Picker</ion-button>
-  <div>
-    <ion-list>
-      <ion-item *ngFor = "let a of peptide">
-        {{ a | json }}
-      </ion-item>
-    </ion-list> 
-  </div>
+  <ion-button class="picker-button">Calculate</ion-button>
+  <table class="tbl">
+    <tr class="tbl-tr" *ngFor = "let a of peptide; let i=index">
+      <td class="tbl-tr-td">{{ protOne[i].name }}</td>
+      <td class="tbl-tr-td">{{ a.triple }}</td>
+      <td class="tbl-tr-td">{{ protTwo[i].name }}</td>
+      <ion-button class="del-button" shape="round" color="danger">-</ion-button>
+    </tr>
+  </table>
 </ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-button class="button-foot" (click)="openPicker()">Open Picker</ion-button>
+  </ion-toolbar>
+</ion-footer>

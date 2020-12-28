@@ -1,0 +1,22 @@
+[
+    {
+        "name":"",
+        "mass":"0",
+        "description":""
+    },
+    {
+        "name":"fmoc",
+        "mass":"222",
+        "description":"fmoc"
+    },
+    {
+        "name":"boc",
+        "mass":"100",
+        "description":"boc"
+    },
+    {
+        "name":"ivDde",
+        "mass":"400",
+        "description":"ivDde"
+    }
+]
