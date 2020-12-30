@@ -13,16 +13,21 @@ import { ProtectionService } from '../protection.service';
 })
 export class HomePage implements OnInit{
 
+  public testOut:string = "placeholder";
   public aminoOne = new AminoAcid("test","Tes","Z",3,"Tes");
   public testProtOne = new ProtectionGroup("tpgone",1,"tpgone");
   public testProtTwo = new ProtectionGroup("tpgtwo",2,"tpgtwo");
+
+  public aminoTwo = new AminoAcid("AAA","AAA","A",3434,"AAA");
+  public testProtThree = new ProtectionGroup("tpgthrees",13434,"tpgthrees");
+  public testProtFour = new ProtectionGroup("tpgFours",3434,"tpgFours");
     
   public protGrps = [];
   public aminoAcids = []
 
-  public protOne = [this.testProtOne,this.testProtOne];
-  public peptide = [this.aminoOne,this.aminoOne];
-  public protTwo = [this.testProtTwo,this.testProtTwo];
+  public protOne = [this.testProtOne,this.testProtThree];
+  public peptide = [this.aminoOne,this.aminoTwo];
+  public protTwo = [this.testProtTwo,this.testProtFour];
  
 
   constructor(public navCtrl:NavController,
@@ -43,6 +48,13 @@ export class HomePage implements OnInit{
 
   public populateProtectionGroups() {
     this.svcPG.getAllProtectionGroups().subscribe((res) => this.protGrps = res);
+  }
+
+  public removeResidue(i) {
+    this.protOne.splice(i,1);
+    this.peptide.splice(i,1);
+    this.protTwo.splice(i,1);
+    
   }
 
   public openPicker(){

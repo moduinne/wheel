@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Amino-Chain-Project
+      Peptide-Builder
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,12 +13,12 @@
       <td class="tbl-tr-td">{{ protOne[i].name }}</td>
       <td class="tbl-tr-td">{{ a.triple }}</td>
       <td class="tbl-tr-td">{{ protTwo[i].name }}</td>
-      <ion-button class="del-button" shape="round" color="danger">-</ion-button>
+      <ion-button (click)="removeResidue(i)" class="del-button" shape="round" color="danger">del</ion-button>
     </tr>
   </table>
 </ion-content>
 <ion-footer>
   <ion-toolbar>
-    <ion-button class="button-foot" (click)="openPicker()">Open Picker</ion-button>
+    <ion-button class="button-foot" (click)="openPicker()">Add Residue</ion-button>
   </ion-toolbar>
 </ion-footer>
