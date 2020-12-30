@@ -13,21 +13,27 @@ import { ProtectionService } from '../protection.service';
 })
 export class HomePage implements OnInit{
 
-  public testOut:string = "placeholder";
-  public aminoOne = new AminoAcid("test","Tes","Z",3,"Tes");
-  public testProtOne = new ProtectionGroup("tpgone",1,"tpgone");
-  public testProtTwo = new ProtectionGroup("tpgtwo",2,"tpgtwo");
+  //  public testOut:string = "placeholder";
+  //  public aminoOne = new AminoAcid("test","Tes","Z",3,"Tes");
+  //  public testProtOne = new ProtectionGroup("tpgone",1,"tpgone");
+  //  public testProtTwo = new ProtectionGroup("tpgtwo",2,"tpgtwo");
 
-  public aminoTwo = new AminoAcid("AAA","AAA","A",3434,"AAA");
-  public testProtThree = new ProtectionGroup("tpgthrees",13434,"tpgthrees");
-  public testProtFour = new ProtectionGroup("tpgFours",3434,"tpgFours");
+  //  public aminoTwo = new AminoAcid("AAA","AAA","A",3434,"AAA");
+  //  public testProtThree = new ProtectionGroup("tpgthrees",13434,"tpgthrees");
+  //  public testProtFour = new ProtectionGroup("tpgFours",3434,"tpgFours");
+
+  //  public protOne = [this.testProtOne,this.testProtThree];
+  //  public peptide = [this.aminoOne,this.aminoTwo];
+  //  public protTwo = [this.testProtTwo,this.testProtFour];
     
   public protGrps = [];
   public aminoAcids = []
 
-  public protOne = [this.testProtOne,this.testProtThree];
-  public peptide = [this.aminoOne,this.aminoTwo];
-  public protTwo = [this.testProtTwo,this.testProtFour];
+  public protOne = [];
+  public peptide = [];
+  public protTwo = [];
+
+  public massCalc:number = 0;
  
 
   constructor(public navCtrl:NavController,
@@ -40,6 +46,7 @@ export class HomePage implements OnInit{
   ngOnInit(): void {
     this.populateAminoAcids();
     this.populateProtectionGroups();
+    this.calculateMass();
   }
 
   public populateAminoAcids() {
@@ -54,7 +61,7 @@ export class HomePage implements OnInit{
     this.protOne.splice(i,1);
     this.peptide.splice(i,1);
     this.protTwo.splice(i,1);
-    
+    this.calculateMass();
   }
 
   public openPicker(){
@@ -91,6 +98,21 @@ export class HomePage implements OnInit{
           this.protTwo.push(protective);
         }
       }
+      this.calculateMass();
     });
+  }
+
+  public calculateMass() {
+    let localMass:number = 0;
+    let waterWeight = (this.peptide.length - 1) * 18;
+    for(let i = 0 ; i < this.peptide.length ; i++) {
+      localMass += parseInt(this.peptide[i].mass);
+      localMass += parseInt(this.protOne[i].mass);
+      localMass += parseInt(this.protTwo[i].mass);
+      // localMass += this.peptide[i].mass;
+      // localMass +=this.protOne[i].mass;
+      // localMass += this.protTwo[i].mass;
+    }
+    this.massCalc = localMass - waterWeight;
   }
 }

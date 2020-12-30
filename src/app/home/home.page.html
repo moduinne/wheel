@@ -1,19 +1,19 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Peptide-Builder
+      Current mass : {{massCalc}} g/mol
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-button class="picker-button">Calculate</ion-button>
   <table class="tbl">
     <tr class="tbl-tr" *ngFor = "let a of peptide; let i=index">
-      <td class="tbl-tr-td">{{ protOne[i].name }}</td>
+      <td class="tbl-tr-td-bt"><ion-button (click)="removeResidue(i)" class="del-button" shape="round" color="primary">inf</ion-button></td>
+      <td class="tbl-tr-td-l">{{ protOne[i].name }}</td>
       <td class="tbl-tr-td">{{ a.triple }}</td>
-      <td class="tbl-tr-td">{{ protTwo[i].name }}</td>
-      <ion-button (click)="removeResidue(i)" class="del-button" shape="round" color="danger">del</ion-button>
+      <td class="tbl-tr-td-r">{{ protTwo[i].name }}</td>
+      <td class="tbl-tr-td-bt"><ion-button (click)="removeResidue(i)" class="del-button" shape="round" color="danger">del</ion-button></td>
     </tr>
   </table>
 </ion-content>

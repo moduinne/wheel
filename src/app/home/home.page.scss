@@ -1,6 +1,6 @@
 .tbl{
-  width: 90%;
-  margin-left: 5%;
+  width: 100%;
+  //border-style: double;
 }
 .tbl-tr{
   padding-top: 2%;
@@ -9,14 +9,28 @@
   height: 30px;
 }
 .tbl-tr-td{
-  width: 33.3%;
+  //width: 100px;
+  //border-style: dotted;
+  text-align: center;
 }
-.button-foot {
+.tbl-tr-td-l{
+  //width: 100px;
+  //border-style: dotted;
+  text-align: left;
+}
+.tbl-tr-td-r{
+  //width: 100px;
+  //border-style: dotted;
+  text-align: right;
+}
+.tbl-tr-td-bt{
+  width: 10px;
+  //border-style: dotted;
+  text-align: justify;
+}
+.button-foot{
   width: 100%;
 }
 .del-button{
- width: 25%;
-}
-.picker-button {
-  margin: 5%;
+ width: 10%;
 }
