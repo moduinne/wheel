@@ -9,11 +9,11 @@
 <ion-content [fullscreen]="true">
   <table class="tbl">
     <tr class="tbl-tr" *ngFor = "let a of peptide; let i=index">
-      <td class="tbl-tr-td-bt"><ion-button (click)="removeResidue(i)" class="del-button" shape="round" color="primary">inf</ion-button></td>
-      <td class="tbl-tr-td-l">{{ protOne[i].name }}</td>
+      <td class="tbl-tr-td">{{ protOne[i].name }}</td>
       <td class="tbl-tr-td">{{ a.triple }}</td>
-      <td class="tbl-tr-td-r">{{ protTwo[i].name }}</td>
-      <td class="tbl-tr-td-bt"><ion-button (click)="removeResidue(i)" class="del-button" shape="round" color="danger">del</ion-button></td>
+      <td class="tbl-tr-td">{{ protTwo[i].name }}</td>
+      <td class="tbl-tr-td"><ion-button (click)="openPickerAtIndex(i)" class="del-button" shape="round" color="primary">?</ion-button></td>
+      <td class="tbl-tr-td"><ion-button (click)="removeResidue(i)" class="del-button" shape="round" color="danger">x</ion-button></td>
     </tr>
   </table>
 </ion-content>

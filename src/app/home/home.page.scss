@@ -1,36 +1,22 @@
 .tbl{
-  width: 100%;
-  //border-style: double;
+  width: 80%;
+  margin-left: 5%;
+  margin-top: 5%;
 }
 .tbl-tr{
   padding-top: 2%;
   padding-bottom: 2%;
-  width: 100%;
+  width: 80%;
   height: 30px;
 }
 .tbl-tr-td{
-  //width: 100px;
-  //border-style: dotted;
   text-align: center;
+  //border-style: inset;
+  width:20%;
 }
-.tbl-tr-td-l{
-  //width: 100px;
-  //border-style: dotted;
-  text-align: left;
-}
-.tbl-tr-td-r{
-  //width: 100px;
-  //border-style: dotted;
-  text-align: right;
-}
-.tbl-tr-td-bt{
+.del-button{
   width: 10px;
-  //border-style: dotted;
-  text-align: justify;
 }
 .button-foot{
   width: 100%;
-}
-.del-button{
- width: 10%;
 }
