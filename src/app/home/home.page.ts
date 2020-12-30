@@ -12,12 +12,13 @@ import { ProtectionService } from '../protection.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit{
-    
+
   public protGrps = [];
   public aminoAcids = []
   public protOne = [];
   public peptide = [];
   public protTwo = [];
+  public posTrips = []; //[[peptide,protone,prottwo]]
   public massCalc = 0;
  
   constructor(public navCtrl:NavController,
@@ -47,12 +48,13 @@ export class HomePage implements OnInit{
     this.protOne.splice(i,1);
     this.peptide.splice(i,1);
     this.protTwo.splice(i,1);
+    this.posTrips.splice(i,1);
     this.calculateMass();
   }
 
   /**Opens the peptide builder at the position chosen in app for editing */
   public openPickerAtIndex(i){
-    let indexChosen:number = i;
+    let args = this.posTrips[i];
     this.selector.show({
       title:'Peptide-Builder',
       positiveButtonText:'Select',
@@ -63,29 +65,33 @@ export class HomePage implements OnInit{
         this.protGrps
       ],
       defaultItems: [
-        {index:0, value:this.protGrps[indexChosen].description},
-        {index:1, value:this.aminoAcids[indexChosen].description},
-        {index:2, value:this.protGrps[indexChosen].description}
+        {index:0, value:this.protGrps[args[1]].description},
+        {index:1, value:this.aminoAcids[args[0]].description},
+        {index:2, value:this.protGrps[args[2]].description}
       ]
     }).then((result) => {
       for(let a of this.aminoAcids){
         if(a.description === result[1].description) {
           let residue = new AminoAcid(a.name,a.triple,a.single,a.mass,a.description);
-          this.peptide[indexChosen] = residue;
+          this.peptide[i] = residue;
+          this.posTrips[i][0] = result[1].index;
         }
       }
       for (let p of this.protGrps){
         if(p.description === result[0].description) {
           let protective = new ProtectionGroup(p.name,p.mass,p.description);
-          this.protOne[indexChosen] = protective;
+          this.protOne[i] = protective;
+          this.posTrips[i][1] = result[0].index;
         }
       }
       for (let p of this.protGrps){
         if(p.description === result[2].description) {
           let protective = new ProtectionGroup(p.name,p.mass,p.description);
-          this.protTwo[indexChosen] = protective;
+          this.protTwo[i] = protective;
+          this.posTrips[i][2] = result[2].index;
         }
       }
+      
       this.calculateMass();
     });
   }
@@ -107,24 +113,29 @@ export class HomePage implements OnInit{
         {index:2, value:this.protGrps[0].description}
       ]
     }).then((result) => {
+      let coords = [];
       for(let a of this.aminoAcids){
         if(a.description === result[1].description) {
           let residue = new AminoAcid(a.name,a.triple,a.single,a.mass,a.description);
           this.peptide.push(residue);
+          coords.push(result[1].index);
         }
       }
       for (let p of this.protGrps){
         if(p.description === result[0].description) {
           let protective = new ProtectionGroup(p.name,p.mass,p.description);
           this.protOne.push(protective);
+          coords.push(result[0].index);
         }
       }
       for (let p of this.protGrps){
         if(p.description === result[2].description) {
           let protective = new ProtectionGroup(p.name,p.mass,p.description);
           this.protTwo.push(protective);
+          coords.push(result[2].index);
         }
       }
+      this.posTrips.push(coords);
       this.calculateMass();
     });
   }
