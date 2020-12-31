@@ -20,6 +20,8 @@ export class HomePage implements OnInit{
   public protTwo = [];
   public posTrips = []; //[[peptide,protone,prottwo]]
   public massCalc = 0;
+  public ticPos = [];
+  public ticNeg = [];
  
   constructor(public navCtrl:NavController,
     private svcAA:AminoAcidService,
@@ -91,7 +93,6 @@ export class HomePage implements OnInit{
           this.posTrips[i][2] = result[2].index;
         }
       }
-      
       this.calculateMass();
     });
   }
@@ -153,5 +154,7 @@ export class HomePage implements OnInit{
     if(this.peptide.length === 0) {
       this.massCalc = 0;
     }
+    let localTicPos = [];
+    let localTicNeg = [];
   }
 }
