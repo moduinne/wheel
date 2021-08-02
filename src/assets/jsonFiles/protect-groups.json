@@ -16,7 +16,12 @@
     },
     {
         "name":"ivDde",
-        "mass":"400",
+        "mass":"207",
         "description":"ivDde"
+    },
+    {
+        "name":"Trt",
+        "mass":"243",
+        "description":"Trt"
     }
 ]

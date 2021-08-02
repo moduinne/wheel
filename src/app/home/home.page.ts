@@ -154,7 +154,12 @@ export class HomePage implements OnInit{
     if(this.peptide.length === 0) {
       this.massCalc = 0;
     }
-    let localTicPos = [];
-    let localTicNeg = [];
+    if(this.peptide.length === 0) {
+      this.ticNeg = [0];
+      this.ticPos = [0]
+    } else {
+      this.ticPos = [this.massCalc + 1, Math.round((this.massCalc + 2)/2), Math.round((this.massCalc + 3)/3)];//TODO
+      this.ticNeg = [this.massCalc - 1, Math.round(2*(this.massCalc-1)), (this.massCalc-1) + 114];//TODO
+    }
   }
 }
