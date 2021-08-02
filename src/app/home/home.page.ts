@@ -141,6 +141,10 @@ export class HomePage implements OnInit{
     });
   }
 
+  openMassAdditionPicker() {
+    return;
+  }
+
   /**Calculates the mass based resdiues and protective groups present in the peptide */
   private calculateMass() {
     let localMass:number = 0;

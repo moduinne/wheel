@@ -44,6 +44,15 @@
 </ion-content>
 <ion-footer>
   <ion-toolbar>
-    <ion-button class="button-foot" (click)="openPicker()">Add Residue</ion-button>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button class="button-foot" (click)="openMassAdditionPicker()">Add Mass</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="button-foot" (click)="openPicker()">Add Residue</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-toolbar>
 </ion-footer>
