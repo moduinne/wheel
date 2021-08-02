@@ -1,9 +1,32 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Current mass : {{ massCalc }} g/mol<br>
-      TIC(+) : {{ ticPos }}<br>
-      TIC(-)  : {{ ticNeg }}
+      <ion-grid>
+        <ion-row>
+          <ion-col class='column'>
+            Mass :
+          </ion-col>
+          <ion-col>
+            {{ massCalc }} g/mol
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class='column'>
+            + :
+          </ion-col>
+          <ion-col>
+            {{ ticPos }}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class='column'>
+            - :
+          </ion-col>
+          <ion-col>
+            {{ ticNeg }}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-title>
   </ion-toolbar>
 </ion-header>
