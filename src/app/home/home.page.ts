@@ -13,6 +13,8 @@ import { ProtectionService } from '../protection.service';
 })
 export class HomePage implements OnInit{
 
+  public testMass = '403';
+
   public protGrps = [];
   public aminoAcids = []
   public protOne = [];
@@ -142,8 +144,16 @@ export class HomePage implements OnInit{
   }
 
   openMassAdditionPicker() {
-    return;
+    this.peptide.push(new AminoAcid(this.testMass,
+      this.testMass,
+      this.testMass,
+      parseInt(this.testMass),
+      this.testMass));
+      this.protOne.push(new ProtectionGroup("",0,""));
+      this.protTwo.push(new ProtectionGroup("",0,""));
+      this.calculateMass();
   }
+
 
   /**Calculates the mass based resdiues and protective groups present in the peptide */
   private calculateMass() {

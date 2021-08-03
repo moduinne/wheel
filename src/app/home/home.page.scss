@@ -12,6 +12,7 @@
 .tbl-tr-td{
   text-align: center;
   width:20%;
+  border-style: groove;
 }
 .del-button{
   width: 10px;
@@ -19,6 +20,18 @@
 .button-foot{
   width: 100%;
 }
-.column {
+ion-grid{
+  width: 100%;
+  //border-style: groove;
+}
+.column-left{
+  max-width: 30%;
   text-align: right;
+}
+.column-right{
+  text-align: left;
+}
+.column-end{
+  max-width: 10px;
+  //border-style: dotted;
 }

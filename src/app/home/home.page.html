@@ -3,27 +3,33 @@
     <ion-title>
       <ion-grid>
         <ion-row>
-          <ion-col class='column'>
+          <ion-col class='column-left'>
             Mass :
           </ion-col>
-          <ion-col>
+          <ion-col class='column-right'>
             {{ massCalc }} g/mol
           </ion-col>
+          <ion-col class='column-end'>
+          </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col class='column'>
+          <ion-col class='column-left'>
             + :
           </ion-col>
-          <ion-col>
+          <ion-col class='column-right'>
             {{ ticPos }}
+          </ion-col>
+          <ion-col class='column-end'>
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col class='column'>
+          <ion-col class='column-left'>
             - :
           </ion-col>
-          <ion-col>
+          <ion-col class='column-right'>
             {{ ticNeg }}
+          </ion-col>
+          <ion-col class='column-end'>
           </ion-col>
         </ion-row>
       </ion-grid>
