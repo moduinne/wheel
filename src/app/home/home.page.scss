@@ -6,8 +6,33 @@
 }
 .peptide-col{
   text-align: center;
-  max-width: 20%;
+  max-width: 15%;
   max-height: 15%;
+}
+.col-hor-bond {
+  max-width: 5%;
+  max-height: 15%;
+}
+.row-bond-top{
+  border-bottom: solid;
+  height: 50%;
+  width: 100%;
+}
+.row-bond-bottom{
+  border-top: solid;
+  height: 50%;
+  width: 100%;
+}
+.peptide-bond-col{
+  text-align: center;
+  max-width: 15%;
+  max-height: 15%;
+}
+.peptide-bond-left{
+  border-right: solid;
+}
+.peptide-bond-right{
+  border-left: solid;
 }
  ///////////////////////////////////////////////////////////
  ion-grid{

@@ -32,33 +32,70 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-grid class='peptide-grid'>
-    <ion-row class='peptide-row' *ngFor = 'let a of peptide; let i=index'>
+  <ion-grid class='peptide-grid' *ngFor = 'let a of peptide; let i=index'>
+    <ion-row class='peptide-row'>
+
       <ion-col class="peptide-col">
         <ion-button [disabled]='true' shape="round" expand="full" color="warning">
           {{ protOne[i].name }}
         </ion-button>
       </ion-col>
+
+      <ion-col class='hor-bond'>
+        <ion-row class="row-bond-top"></ion-row>
+        <ion-row class="row-bond-bottom"></ion-row>
+      </ion-col>
+
       <ion-col class="peptide-col">
         <ion-button [disabled]='true' shape="round" expand="full" color="success">
           {{ a.triple }}
         </ion-button>
       </ion-col>
+
+      <ion-col class='hor-bond'>
+        <ion-row class="row-bond-top"></ion-row>
+        <ion-row class="row-bond-bottom"></ion-row>
+      </ion-col>
+
       <ion-col class="peptide-col">
         <ion-button [disabled]='true' shape="round" expand="full" color="warning">
           {{ protTwo[i].name }}
         </ion-button>
       </ion-col>
+
       <ion-col class="peptide-col">
         <ion-button expand="full" (click)="openPickerAtIndex(i)" color="primary">
-          ?
+          edit
         </ion-button>
       </ion-col>
+
       <ion-col class="peptide-col">
         <ion-button expand="full" (click)="removeResidue(i)" color="danger">
           x
         </ion-button>
       </ion-col>
+
+    </ion-row>
+
+    <ion-row class="peptide-bond-row">
+
+      <ion-col class="peptide-bond-col"></ion-col>
+
+      <ion-col class='hor-bond'></ion-col>
+
+      <ion-col class="peptide-bond-col">
+        <ion-col class="peptide-bond-left"></ion-col>
+        <ion-col class="peptide-bond-right"></ion-col>
+      </ion-col>
+
+      <ion-col class='hor-bond'></ion-col>
+
+      <ion-col class="peptide-bond-col"></ion-col>
+
+      <ion-col class="peptide-bond-col"></ion-col>
+
+      <ion-col class="peptide-bond-col"></ion-col>
+
     </ion-row>
   </ion-grid>
 
@@ -68,7 +105,7 @@
     <ion-grid>
       <ion-row>
         <ion-col>
-          <ion-button expand="full" class="button-foot" (click)="openMassAdditionPicker()">Add Mass</ion-button>
+          <ion-button [disabled]="true" expand="full" class="button-foot" (click)="openMassAdditionPicker()">Add Mass</ion-button>
         </ion-col>
         <ion-col>
           <ion-button expand="full" class="button-foot" (click)="openPicker()">Add Residue</ion-button>
