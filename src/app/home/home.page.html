@@ -35,17 +35,17 @@
   <ion-grid class='peptide-grid'>
     <ion-row class='peptide-row' *ngFor = 'let a of peptide; let i=index'>
       <ion-col class="peptide-col">
-        <ion-button expand="full" color="success">
+        <ion-button [disabled]='true' shape="round" expand="full" color="warning">
           {{ protOne[i].name }}
         </ion-button>
       </ion-col>
       <ion-col class="peptide-col">
-        <ion-button expand="full" color="warning">
+        <ion-button [disabled]='true' shape="round" expand="full" color="success">
           {{ a.triple }}
         </ion-button>
       </ion-col>
       <ion-col class="peptide-col">
-        <ion-button expand="full" color="success">
+        <ion-button [disabled]='true' shape="round" expand="full" color="warning">
           {{ protTwo[i].name }}
         </ion-button>
       </ion-col>

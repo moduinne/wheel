@@ -150,11 +150,11 @@ export class HomePage implements OnInit{
       this.testMass,
       parseInt(this.testMass),
       this.testMass));
-      this.protOne.push(new ProtectionGroup("",0,""));
-      this.protTwo.push(new ProtectionGroup("",0,""));
+      this.protOne.push(new ProtectionGroup("-",0,"-"));
+      this.protTwo.push(new ProtectionGroup("-",0,"-"));
       this.calculateMass();
   }
-  
+
   /**Calculates the mass based resdiues and protective groups present in the peptide */
   private calculateMass() {
     let localMass:number = 0;
