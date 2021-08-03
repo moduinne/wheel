@@ -28,7 +28,8 @@ export class HomePage implements OnInit{
   constructor(public navCtrl:NavController,
     private svcAA:AminoAcidService,
     private svcPG:ProtectionService,
-    private selector:WheelSelector
+    private selector:WheelSelector,
+    private massSelector:WheelSelector
     ) {}
 
   /**The first code to be run on initialising */
@@ -153,8 +154,7 @@ export class HomePage implements OnInit{
       this.protTwo.push(new ProtectionGroup("",0,""));
       this.calculateMass();
   }
-
-
+  
   /**Calculates the mass based resdiues and protective groups present in the peptide */
   private calculateMass() {
     let localMass:number = 0;
@@ -173,7 +173,7 @@ export class HomePage implements OnInit{
       this.ticPos = [0]
     } else {
       this.ticPos = [this.massCalc + 1, Math.round((this.massCalc + 2)/2), Math.round((this.massCalc + 3)/3)];//TODO
-      this.ticNeg = [this.massCalc - 1, Math.round(2*(this.massCalc-1)), (this.massCalc-1) + 114];//TODO
+      this.ticNeg = [this.massCalc - 1, (this.massCalc-1) + 114, Math.round(2*(this.massCalc-1))];//TODO
     }
   }
 }

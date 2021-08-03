@@ -3,33 +3,27 @@
     <ion-title>
       <ion-grid>
         <ion-row>
-          <ion-col class='column-left'>
+          <ion-col class='column-left-header'>
             Mass :
           </ion-col>
-          <ion-col class='column-right'>
-            {{ massCalc }} g/mol
-          </ion-col>
-          <ion-col class='column-end'>
+          <ion-col class='column-right-header'>
+            {{ massCalc }}
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col class='column-left'>
+          <ion-col class='column-left-header'>
             + :
           </ion-col>
-          <ion-col class='column-right'>
+          <ion-col class='column-right-header'>
             {{ ticPos }}
-          </ion-col>
-          <ion-col class='column-end'>
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col class='column-left'>
+          <ion-col class='column-left-header'>
             - :
           </ion-col>
-          <ion-col class='column-right'>
+          <ion-col class='column-right-header'>
             {{ ticNeg }}
-          </ion-col>
-          <ion-col class='column-end'>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -38,25 +32,46 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <table class="tbl">
-    <tr class="tbl-tr" *ngFor = "let a of peptide; let i=index">
-      <td class="tbl-tr-td">{{ protOne[i].name }}</td>
-      <td class="tbl-tr-td">{{ a.triple }}</td>
-      <td class="tbl-tr-td">{{ protTwo[i].name }}</td>
-      <td class="tbl-tr-td"><ion-button (click)="openPickerAtIndex(i)" class="del-button" shape="round" color="primary">?</ion-button></td>
-      <td class="tbl-tr-td"><ion-button (click)="removeResidue(i)" class="del-button" shape="round" color="danger">x</ion-button></td>
-    </tr>
-  </table>
+  <ion-grid class='peptide-grid'>
+    <ion-row class='peptide-row' *ngFor = 'let a of peptide; let i=index'>
+      <ion-col class="peptide-col">
+        <ion-button expand="full" color="success">
+          {{ protOne[i].name }}
+        </ion-button>
+      </ion-col>
+      <ion-col class="peptide-col">
+        <ion-button expand="full" color="warning">
+          {{ a.triple }}
+        </ion-button>
+      </ion-col>
+      <ion-col class="peptide-col">
+        <ion-button expand="full" color="success">
+          {{ protTwo[i].name }}
+        </ion-button>
+      </ion-col>
+      <ion-col class="peptide-col">
+        <ion-button expand="full" (click)="openPickerAtIndex(i)" color="primary">
+          ?
+        </ion-button>
+      </ion-col>
+      <ion-col class="peptide-col">
+        <ion-button expand="full" (click)="removeResidue(i)" color="danger">
+          x
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>
 <ion-footer>
   <ion-toolbar>
     <ion-grid>
       <ion-row>
         <ion-col>
-          <ion-button class="button-foot" (click)="openMassAdditionPicker()">Add Mass</ion-button>
+          <ion-button expand="full" class="button-foot" (click)="openMassAdditionPicker()">Add Mass</ion-button>
         </ion-col>
         <ion-col>
-          <ion-button class="button-foot" (click)="openPicker()">Add Residue</ion-button>
+          <ion-button expand="full" class="button-foot" (click)="openPicker()">Add Residue</ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>

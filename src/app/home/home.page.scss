@@ -1,37 +1,24 @@
-.tbl{
-  width: 80%;
-  margin-left: 5%;
-  margin-top: 5%;
+.peptide-grid{
+  width: 100%;
 }
-.tbl-tr{
-  padding-top: 2%;
-  padding-bottom: 2%;
-  width: 80%;
-  height: 30px;
+.peptide-row{
+  height: 15%;
 }
-.tbl-tr-td{
+.peptide-col{
   text-align: center;
-  width:20%;
-  border-style: groove;
 }
-.del-button{
-  width: 10px;
+ ///////////////////////////////////////////////////////////
+ ion-grid{
+  width: 100%;
 }
 .button-foot{
   width: 100%;
 }
-ion-grid{
-  width: 100%;
-  //border-style: groove;
-}
-.column-left{
+////////////////////////////////////////////////////////////
+.column-left-header{
   max-width: 30%;
   text-align: right;
 }
-.column-right{
+.column-right-header{
   text-align: left;
-}
-.column-end{
-  max-width: 10px;
-  //border-style: dotted;
 }
