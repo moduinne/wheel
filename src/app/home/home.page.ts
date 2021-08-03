@@ -24,6 +24,8 @@ export class HomePage implements OnInit{
   public massCalc = 0;
   public ticPos = [];
   public ticNeg = [];
+
+  public isBonding:boolean = false;
  
   constructor(public navCtrl:NavController,
     private svcAA:AminoAcidService,
@@ -157,6 +159,12 @@ export class HomePage implements OnInit{
 
   /**Calculates the mass based resdiues and protective groups present in the peptide */
   private calculateMass() {
+    if(this.peptide.length > 1) {
+      this.isBonding = true;
+    }
+    if(this.peptide.length < 2) {
+      this.isBonding = false;
+    }
     let localMass:number = 0;
     let waterWeight = (this.peptide.length - 1) * 18;
     for(let i = 0 ; i < this.peptide.length ; i++) {

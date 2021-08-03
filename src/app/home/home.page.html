@@ -47,7 +47,7 @@
       </ion-col>
 
       <ion-col class="peptide-col">
-        <ion-button [disabled]='true' shape="round" expand="full" color="success">
+        <ion-button class="pep-but" [disabled]='true' shape="round" expand="full" color="success">
           {{ a.triple }}
         </ion-button>
       </ion-col>
@@ -77,18 +77,19 @@
 
     </ion-row>
 
-    <ion-row class="peptide-bond-row">
+
+    <ion-row class="peptide-bond-row" *ngIf = "isBonding">
 
       <ion-col class="peptide-bond-col"></ion-col>
 
-      <ion-col class='hor-bond'></ion-col>
+      <ion-col class='peptide-bond-col'></ion-col>
 
       <ion-col class="peptide-bond-col">
         <ion-col class="peptide-bond-left"></ion-col>
         <ion-col class="peptide-bond-right"></ion-col>
       </ion-col>
 
-      <ion-col class='hor-bond'></ion-col>
+      <ion-col class='peptide-bond-col'></ion-col>
 
       <ion-col class="peptide-bond-col"></ion-col>
 
@@ -105,7 +106,7 @@
     <ion-grid>
       <ion-row>
         <ion-col>
-          <ion-button [disabled]="true" expand="full" class="button-foot" (click)="openMassAdditionPicker()">Add Mass</ion-button>
+          <ion-button [disabled]="false" expand="full" class="button-foot" (click)="openMassAdditionPicker()">Add Mass</ion-button>
         </ion-col>
         <ion-col>
           <ion-button expand="full" class="button-foot" (click)="openPicker()">Add Residue</ion-button>

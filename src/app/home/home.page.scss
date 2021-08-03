@@ -1,5 +1,7 @@
+
 .peptide-grid{
   width: 100%;
+  //border-style: dashed;
 }
 .peptide-row{
   max-height: 15%;
@@ -8,6 +10,11 @@
   text-align: center;
   max-width: 15%;
   max-height: 15%;
+}
+.pep-but{
+  font-weight: 1000;
+  fill-rule: brown;
+ 
 }
 .col-hor-bond {
   max-width: 5%;
@@ -23,16 +30,25 @@
   height: 50%;
   width: 100%;
 }
+
+
+
+.peptide-bond-row{
+  max-height: 15px;
+  //border-style: dotted;
+}
 .peptide-bond-col{
   text-align: center;
   max-width: 15%;
-  max-height: 15%;
+  max-height: 15px;
 }
 .peptide-bond-left{
   border-right: solid;
+  max-height: 15px;
 }
 .peptide-bond-right{
   border-left: solid;
+  max-height: 15px;
 }
  ///////////////////////////////////////////////////////////
  ion-grid{
